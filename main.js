@@ -1,34 +1,14 @@
-class List {
-    constructor()
-    {
-        this.data = [];
-    }
+// let -> altera os valores dentro do esocopo da função
+// const -> não deixa receber um nova atribuição
 
-    add(data)
-    {
-        this.data.push(data);
-        console.log(this.data)
-    }
-}
-
-
-class TodoList extends List
+function teste (x)
 {
-    constructor()
+    let y = 2;
+    if (x > 5)
     {
-        super();
-        this.usuario = "Felipe";
-    }
-    mostraUsuario()
-    {
-        console.log(this.usuario);
+        let y = 4;
+        console.log(x, y);
     }
 }
 
-var MinhaLista = new TodoList();
-
-    document.getElementById('novotodo').onclick = function(){
-    MinhaLista.add("Novo Todo");
-
-}
-MinhaLista.mostraUsuario();
+teste(10);
