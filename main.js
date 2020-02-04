@@ -1,14 +1,29 @@
-// let -> altera os valores dentro do esocopo da função
-// const -> não deixa receber um nova atribuição
+const arr = [1, 3, 4, 5, 8, 9];
 
-function teste (x)
-{
-    let y = 2;
-    if (x > 5)
+const newArr = arr.map (function(item, index)
     {
-        let y = 4;
-        console.log(x, y);
-    }
-}
+        return item + index;
+    });
 
-teste(10);
+console.log(newArr);
+
+const sum = arr.reduce(function(total, next)
+    {
+        return(total+next);
+    });
+
+console.log(sum);
+
+const filter = arr.filter(function(item)
+    {
+        return item % 2 === 0;
+    });
+
+console.log(filter);
+
+const find = arr.find(function(item)
+    {
+        return item === 2;
+    });
+
+console.log(find);
