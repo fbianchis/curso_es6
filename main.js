@@ -1,9 +1,18 @@
-function soma (a = 3,b = 6)
+const usuario =
 {
-    return a + b;
+    nome: "Felipe",
+    idade: 23,
+    endereco : {
+        cidade: "Pato Branco",
+        estado: "PR",
+
+    },
+
+};
+
+function mostaNome({nome, idade})
+{
+    console.log(nome, idade);
 }
 
-const somaAF = (a = 3, b = 6) => a+b;
-
-console.log(soma(1));
-console.log(somaAF(4,5));
+mostaNome(usuario);
