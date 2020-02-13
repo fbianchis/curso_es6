@@ -3,7 +3,7 @@ module.exports =
     entry:
     [
         '@babel/polyfill',
-        './src/exer1m2.js'
+        './src/main.js'
     ],
     output: 
     {
